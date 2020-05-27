@@ -1,0 +1,46 @@
+import { writable } from "svelte/store";
+export let jData = writable({
+  id: 77,
+  name: "Elaheh",
+  lastname: "Arjomandi",
+  image: "/assets/w1.png",
+  status: 1,
+  friends: [
+    { id: 4, name: "AA", lastname: "Holms", status: 0 },
+    { id: 5, name: "Tom", lastname: "Wilson", status: 1 },
+    { id: 6, name: "Meg", lastname: "Rayan", status: 0 },
+    { id: 7, name: "Allen", lastname: "Holms", status: 1 },
+  ],
+  posts: [
+    {
+      id: 11,
+      authorId: 7,
+      caption: "Awsome post",
+      comments: 2,
+      likes: 4,
+      image: "https://source.unsplash.com/random/580x300",
+      createdAt: 1,
+    },
+    {
+      id: 12,
+      authorId: 5,
+      caption: "My second post",
+      comments: 5,
+      likes: 2,
+      image: "https://source.unsplash.com/random/581x300",
+      createdAt: 4,
+    },
+    {
+      id: 13,
+      authorId: 6,
+      caption: "Learnin svelte",
+      comments: 7,
+      likes: 11,
+      image: "https://source.unsplash.com/random/579x301",
+      createdAt: 5,
+    },
+  ],
+  unreadMessages: [{ id: 11, message: "hello" }],
+  activeChats: [],
+  pageDisplayed: "posts",
+});

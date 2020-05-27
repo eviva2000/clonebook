@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "4.17.1",
+    "formidable": "1.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "3.5.5"
+  },
+  "scripts": {
+    "start-dev": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

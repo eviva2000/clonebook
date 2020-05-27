@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <form id="loginForm" action="" onsubmit="return false">
+      <input type="text" name="username" id="" placeholder="Username" />
+      <input type="text" name="password" id="" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </form>
+    <script>
+      async function login() {
+        let form = new FormData(document.getElementById("loginForm"));
+        console.log(form);
+        let connection = await fetch("login", {
+          method: "POST",
+          body: form,
+        });
+        let response = await connection.text();
+        console.log(response);
+        localStorage.jwt = response;
+        // alert(response);
+      }
+    </script>
+  </body>
+</html>
